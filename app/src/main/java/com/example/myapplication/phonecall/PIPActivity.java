@@ -34,15 +34,15 @@ public class PIPActivity extends AppCompatActivity {
     VideoView videoView;
     @BindView(R.id.back)
     ImageButton back;
-
+    private MediaController controller;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pip);
         ButterKnife.bind(this);
-
+        controller = new MediaController(this);
         videoView.setVideoURI(Uri.parse("https://www.radiantmediaplayer.com/media/bbb-360p.mp4"));
-        videoView.setMediaController(new MediaController(this));
+        videoView.setMediaController(controller);
         videoView.requestFocus();
         videoView.start();
 
@@ -74,7 +74,7 @@ public class PIPActivity extends AppCompatActivity {
         } else {
             // Restore the full-screen UI.
         back.setVisibility(View.VISIBLE);
-        videoView.setMediaController(new MediaController(this));
+        videoView.setMediaController(controller);
         }
     }
     @Override

@@ -2,5 +2,10 @@
     <string name="app_name">My Application</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="title_activity_maps">Map</string>
+    <string name="message">Looks like you are not connected to the internet. Please check your internet connection and try again"</string>
+    <string name="channel_name">Istar Notification</string>
+    <string name="channel_description">Istar Notification</string>
+    <string name="notif_action_reply">Add a comment</string>
+
 
 </resources>
