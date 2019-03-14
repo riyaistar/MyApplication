@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.creativeviewpager.Main2Activity;
 import com.example.myapplication.notif.NotificationActivity;
 
 import butterknife.BindView;
@@ -29,8 +30,6 @@ public class PhoneCallActivity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 0;
     @BindView(R.id.call_button)
     Button button;
-    @BindView(R.id.openmaps)
-    Button openmaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,12 +75,6 @@ public class PhoneCallActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.openmaps)
-    public void openmaps() {
-        startActivity(new Intent(PhoneCallActivity.this, MapsActivity.class));
-        finish();
-    }
-
     @OnClick(R.id.video)
     public void openvideo() {
         startActivity(new Intent(PhoneCallActivity.this, PIPActivity.class));
@@ -125,6 +118,12 @@ public class PhoneCallActivity extends AppCompatActivity {
     @OnClick(R.id.notification)
     public void opennotification() {
         startActivity(new Intent(PhoneCallActivity.this, NotificationActivity.class));
+        finish();
+    }
+
+    @OnClick(R.id.creativeViewPager)
+    public void openViewPager(){
+        startActivity(new Intent(PhoneCallActivity.this, Main2Activity.class));
         finish();
     }
 }
